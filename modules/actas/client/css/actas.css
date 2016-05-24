@@ -1,0 +1,8 @@
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	color: #fff;
+	background: #00aa00; 
+	border: 1px solid #00aa00;
+}
+p.content {
+	white-space: pre; 
+}

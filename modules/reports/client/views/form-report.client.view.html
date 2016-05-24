@@ -1,0 +1,85 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.report._id ? 'Edit Report' : 'New Report'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.reportForm" class="form-horizontal" ng-submit="vm.save(vm.form.reportForm.$valid)" novalidate>
+      <fieldset>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="year">Year</label>
+          <input name="year" type="number" ng-model="vm.report.year" id="year" class="form-control" placeholder="2016" required>
+          <div ng-messages="vm.form.reportForm.year.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Report year is required.</p>
+          </div>
+       
+          <label class="control-label" for="month">Month</label>
+          <select class="form-control" name="month" id="month" ng-model="vm.repot.month">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <fieldset>
+          <div class="form-group" show-errors>
+            <label class="control-label" for="totalCuotasIngresadas">totalCuotasIngresadas</label>
+            <input name="totalCuotasIngresadas" type="number" ng-model="vm.report.totalCuotasIngresadas" id="totalCuotasIngresadas" class="form-control" placeholder="0" required>
+            <div ng-messages="vm.form.reportForm.totalCuotasIngresadas.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Report totalCuotasIngresadas is required.</p>
+            </div>
+          </div>
+
+          <div class="form-group" show-errors>
+            <label class="control-label" for="totalGastos">totalGastos</label>
+            <input name="totalGastos" type="number" ng-model="vm.report.totalGastos" id="totalGastos" class="form-control" placeholder="0" required>
+            <div ng-messages="vm.form.reportForm.totalGastos.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Report totalGastos is required.</p>
+            </div>
+          </div>
+
+          <div class="form-group" show-errors>
+            <label class="control-label" for="totalSocios">totalSocios</label>
+            <input name="totalSocios" type="number" ng-model="vm.report.totalSocios" id="totalSocios" class="form-control" placeholder="0" required>
+            <div ng-messages="vm.form.reportForm.totalSocios.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Report totalSocios is required.</p>
+            </div>
+          </div>
+
+          <div class="form-group" show-errors>
+            <label class="control-label" for="altasSocios">altasSocios</label>
+            <input name="altasSocios" type="number" ng-model="vm.report.altasSocios" id="altasSocios" class="form-control" placeholder="0" required>
+            <div ng-messages="vm.form.reportForm.altasSocios.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Report altasSocios is required.</p>
+            </div>
+          </div>
+
+          <div class="form-group" show-errors>
+            <label class="control-label" for="bajasSocios">bajasSocios</label>
+            <input name="bajasSocios" type="number" ng-model="vm.report.bajasSocios" id="bajasSocios" class="form-control" placeholder="0" required>
+            <div ng-messages="vm.form.reportForm.bajasSocios.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Report bajasSocios is required.</p>
+            </div>
+          </div>
+
+
+
+        </fieldset>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.report._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

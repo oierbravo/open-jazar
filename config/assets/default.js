@@ -6,11 +6,15 @@ module.exports = {
       css: [
         // bower:css
         'public/lib/bootstrap/dist/css/bootstrap.css',
-        'public/lib/bootstrap/dist/css/bootstrap-theme.css'
+        'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+        'public/lib/jquery-ui/themes/smoothness/jquery-ui.css'
         // endbower
       ],
       js: [
         // bower:js
+        'public/lib/jquery/dist/jquery.js',
+        'public/lib/jquery-ui/jquery-ui.js',
+        'public/lib/jquery-ui/ui/i18n/datepicker-es.js',
         'public/lib/angular/angular.js',
         'public/lib/angular-resource/angular-resource.js',
         'public/lib/angular-animate/angular-animate.js',
@@ -18,7 +22,11 @@ module.exports = {
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
         'public/lib/angular-file-upload/dist/angular-file-upload.js',
-        'public/lib/owasp-password-strength-test/owasp-password-strength-test.js'
+        'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
+        'public/lib/angular-ui-date/dist/date.js',
+        'public/lib/angular-elastic/elastic.js',
+        'public/lib/marked/lib/marked.js',
+        'public/lib/angular-marked/dist/angular-marked.js'
         // endbower
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']

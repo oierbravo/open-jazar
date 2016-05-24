@@ -1,6 +1,6 @@
 {
-  "name": "meanjs",
-  "description": "Fullstack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
+  "name": "openjazar",
+  "description": "Non profit",
   "homepage": "http://meanjs.org/",
   "license": "MIT",
   "dependencies": {
@@ -13,7 +13,11 @@
     "angular-resource": "~1.5.0",
     "angular-ui-router": "~0.2.18",
     "bootstrap": "~3.3.6",
-    "owasp-password-strength-test": "~1.3.0"
+    "owasp-password-strength-test": "~1.3.0",
+    "angular-ui-date": "^1.0.1",
+    "angular-elastic": "^2.5.1",
+    "angular-marked": "^1.2.0",
+    "marked": "^0.3.5"
   },
   "overrides": {
     "bootstrap": {
