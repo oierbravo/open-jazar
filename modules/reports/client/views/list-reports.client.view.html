@@ -6,14 +6,7 @@
     <a data-ng-repeat="report in vm.reports"
        data-ui-sref="reports.view({ reportId: report._id })"
        class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span data-ng-bind="report.created | date:'mediumDate'"></span>
-        by
-        <span data-ng-if="report.user" data-ng-bind="report.user.displayName"></span>
-        <span data-ng-if="!report.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" data-ng-bind="report.name"></h4>
+            <h4 class="list-group-item-heading">{{report.year}} - {{report.month}}</h4>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.reports.$resolved && !vm.reports.length">

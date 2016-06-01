@@ -6,14 +6,8 @@
     <a data-ng-repeat="acta in vm.actas"
        data-ui-sref="actas.view({ actaId: acta._id })"
        class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span data-ng-bind="acta.created | date:'mediumDate'"></span>
-        by
-        <span data-ng-if="acta.user" data-ng-bind="acta.user.displayName"></span>
-        <span data-ng-if="!acta.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" data-ng-bind="acta.date"></h4>
+      
+      <h4 class="list-group-item-heading">{{acta.date | date:'mediumDate'}}</h4>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.actas.$resolved && !vm.actas.length">

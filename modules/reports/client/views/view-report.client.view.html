@@ -12,15 +12,12 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
-  <small>
-    <em class="text-muted">
-      Posted on
-      <span data-ng-bind="vm.report.created | date:'mediumDate'"></span>
-      by
-      <span data-ng-if="vm.report.user"
-            data-ng-bind="vm.report.user.displayName"></span>
-      <span data-ng-if="!vm.report.user">Deleted User</span>
-    </em>
-  </small>
+  <ul>
+    <li><strong>Total cuotas ingresadas:</strong>{{vm.report.totalCuotasIngresadas}}</li>
+    <li><strong>Total gastos:</strong>{{vm.report.totalGastos}}€</li>
+    <li><strong>Total socios:</strong>{{vm.report.totalSocios}}</li>
+    <li><strong>Total Altas Socios:</strong>{{vm.report.altasSocios}}</li>
+    <li><strong>Total Bajas Socios:</strong>{{vm.report.bajasSocios}}</li>
+  </ul>
   <p class="lead" data-ng-bind="vm.report.content"></p>
 </section>
